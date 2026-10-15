@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGTempleos | Plataforma de empleo por filtros</title>
+    <meta name="description" content="AGTempleos: la nueva plataforma de empleo por filtros. Encuentra tu trabajo ideal.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ============ NAVEGACIÓN ============ -->
+    <header class="header" id="inicio">
+        <nav class="nav" id="nav">
+            <div class="contenedor nav-contenido">
+                <a href="#inicio" class="logo" aria-label="AGTempleos - Inicio">
+                    <img src="img/logo.png" alt="Logo AGTempleos">
+                </a>
+
+                <div class="enlaces-header" id="menu">
+                    <a href="#inicio" class="activo">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#vacantes">Vacantes</a>
+                    <a href="#resultados">Resultados</a>
+                    <a href="#testimonios">Testimonios</a>
+                    <a href="#faq">Preguntas</a>
+                    <a href="#contacto">Contacto</a>
+                    <button class="btn btn-mini" data-abrir="modal-registro">Registrarme</button>
+                </div>
+
+                <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="burbuja b1"></div>
+            <div class="burbuja b2"></div>
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <span class="etiqueta"><i class="fas fa-bolt"></i> Empleo por filtros inteligentes</span>
+                    <h1>Bienvenido a <span class="resaltado">AGTempleos</span></h1>
+                    <p>La nueva plataforma de empleo por filtros. Encuentra la vacante que va contigo por ciudad, área y tipo de contrato en pocos clics.</p>
+
+                    <form class="buscador" id="form-buscador">
+                        <div class="campo">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="buscar-texto" placeholder="Cargo o palabra clave" aria-label="Buscar cargo">
+                        </div>
+                        <div class="campo">
+                            <i class="fas fa-location-dot"></i>
+                            <select id="buscar-ciudad" aria-label="Ciudad">
+                                <option value="">Todas las ciudades</option>
+                                <option>Bogotá</option>
+                                <option>Medellín</option>
+                                <option>Cali</option>
+                                <option>Barranquilla</option>
+                                <option>Remoto</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primario">Buscar empleo</button>
+                    </form>
+
+                    <div class="hero-links">
+                        <a href="#servicios" class="btn btn-borde">Leer más</a>
+                        <button class="btn btn-texto" data-abrir="modal-registro"><i class="fas fa-user-plus"></i> Crear cuenta gratis</button>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="tarjeta-flota t1"><i class="fas fa-circle-check"></i> Perfil verificado</div>
+                    <div class="tarjeta-flota t2"><i class="fas fa-briefcase"></i> +120 vacantes</div>
+                    <div class="tarjeta-flota t3"><i class="fas fa-building"></i> 5.000 empresas</div>
+                    <div class="circulo-logo"><img src="img/logo.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <!-- ============ SERVICIOS ============ -->
+        <section class="seccion" id="servicios">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="sobretitulo">Servicios</span>
+                    <h2 class="titulo">Te atenderemos de la mejor manera para encontrar tu trabajo ideal</h2>
+                    <p>Todo lo que necesitas para postularte, en un solo lugar.</p>
+                </div>
+
+                <div class="contenedor-articulos">
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-life-ring"></i></div>
+                        <h3>Ayuda</h3>
+                        <p>Resuelve tus dudas sobre cómo postularte y mejorar tu hoja de vida.</p>
+                        <a href="#faq" class="enlace-flecha">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-right-to-bracket"></i></div>
+                        <h3>Inicio de sesión</h3>
+                        <p>Ingresa a tu cuenta y retoma tus postulaciones donde las dejaste.</p>
+                        <button class="enlace-flecha" data-abrir="modal-login">Ingresar <i class="fas fa-arrow-right"></i></button>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-id-card"></i></div>
+                        <h3>Perfil</h3>
+                        <p>Crea un perfil atractivo y deja que las empresas te encuentren a ti.</p>
+                        <button class="enlace-flecha" data-abrir="modal-registro">Crear perfil <i class="fas fa-arrow-right"></i></button>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-envelope"></i></div>
+                        <h3>Correo de atención</h3>
+                        <p>Escríbenos y te respondemos lo más pronto posible.</p>
+                        <a href="mailto:Soslame@gmail.com" class="enlace-flecha">Soslame@gmail.com <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-magnifying-glass"></i></div>
+                        <h3>Empieza ahora</h3>
+                        <p>Explora las vacantes disponibles y filtra por lo que más te interesa.</p>
+                        <a href="#vacantes" class="enlace-flecha">Click aquí <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="articulo">
+                        <div class="icono"><i class="fas fa-user-plus"></i></div>
+                        <h3>Regístrese</h3>
+                        <p>Es gratis y toma menos de un minuto. Tu próximo empleo te espera.</p>
+                        <button class="enlace-flecha" data-abrir="modal-registro">Click aquí <i class="fas fa-arrow-right"></i></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ VACANTES ============ -->
+        <section class="seccion seccion-gris" id="vacantes">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="sobretitulo">Vacantes</span>
+                    <h2 class="titulo">Oportunidades destacadas</h2>
+                    <p>Filtra por área y encuentra la vacante ideal.</p>
+                </div>
+
+                <div class="filtros" id="filtros">
+                    <button class="chip activo" data-filtro="todas">Todas</button>
+                    <button class="chip" data-filtro="tecnologia">Tecnología</button>
+                    <button class="chip" data-filtro="ventas">Ventas</button>
+                    <button class="chip" data-filtro="administracion">Administración</button>
+                    <button class="chip" data-filtro="servicio">Servicio al cliente</button>
+                    <button class="chip" data-filtro="logistica">Logística</button>
+                </div>
+
+                <p class="contador-vacantes" id="contador-vacantes" aria-live="polite"></p>
+
+                <div class="grid-vacantes" id="grid-vacantes"></div>
+
+                <div class="sin-resultados" id="sin-resultados" hidden>
+                    <i class="fas fa-face-frown"></i>
+                    <p>No encontramos vacantes con esos filtros.</p>
+                    <button class="btn btn-borde" id="limpiar-filtros">Limpiar filtros</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PREGUNTAS / CTA ============ -->
+        <section class="cta">
+            <div class="contenedor cta-contenido">
+                <div class="cta-texto">
+                    <h2>¿Tiene preguntas?</h2>
+                    <p>¡Resuélvalas en nuestro número de contacto!</p>
+                </div>
+                <div class="cta-botones">
+                    <a href="#contacto" class="btn btn-blanco"><i class="fas fa-phone"></i> Contáctenos</a>
+                    <a href="#faq" class="btn btn-borde-blanco">Leer más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ RESULTADOS ============ -->
+        <section class="seccion" id="resultados">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="sobretitulo">Resultados</span>
+                    <h2 class="titulo">Números que hablan por nosotros</h2>
+                </div>
+
+                <div class="nombres">
+                    <div class="numero">
+                        <i class="fas fa-building"></i>
+                        <h4>+<span class="contar" data-meta="5000">0</span></h4>
+                        <p>Empresas te esperan</p>
+                    </div>
+                    <div class="numero">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>+<span class="contar" data-meta="120">0</span></h4>
+                        <p>Opciones de vacantes</p>
+                    </div>
+                    <div class="numero">
+                        <i class="fas fa-store"></i>
+                        <h4>+<span class="contar" data-meta="300">0</span></h4>
+                        <p>Cadenas conocidas</p>
+                    </div>
+                    <div class="numero">
+                        <i class="fas fa-city"></i>
+                        <h4>+<span class="contar" data-meta="45">0</span></h4>
+                        <p>Ciudades en el país</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CARRUSEL TESTIMONIOS ============ -->
+        <section class="seccion seccion-oscura" id="testimonios">
+            <div class="contenedor">
+                <div class="encabezado-seccion claro">
+                    <span class="sobretitulo">Testimonios</span>
+                    <h2 class="titulo">Lo que dicen quienes ya encontraron empleo</h2>
+                </div>
+
+                <div class="carrusel" id="carrusel" aria-roledescription="carrusel">
+                    <button class="carrusel-btn prev" id="car-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+
+                    <div class="carrusel-ventana">
+                        <div class="carrusel-pista" id="car-pista">
+                            <article class="slide">
+                                <div class="slide-contenido">
+                                    <i class="fas fa-quote-left comillas"></i>
+                                    <p>Filtré por mi ciudad y mi área y en una semana ya tenía dos entrevistas. Muy fácil de usar.</p>
+                                    <div class="persona">
+                                        <div class="avatar">LM</div>
+                                        <div><strong>Laura M.</strong><span>Asesora comercial · Medellín</span></div>
+                                    </div>
+                                    <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </article>
+                            <article class="slide">
+                                <div class="slide-contenido">
+                                    <i class="fas fa-quote-left comillas"></i>
+                                    <p>Me registré, subí mi perfil y las empresas me contactaron a mí. Conseguí mi primer trabajo en tecnología.</p>
+                                    <div class="persona">
+                                        <div class="avatar">CR</div>
+                                        <div><strong>Carlos R.</strong><span>Desarrollador junior · Bogotá</span></div>
+                                    </div>
+                                    <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </article>
+                            <article class="slide">
+                                <div class="slide-contenido">
+                                    <i class="fas fa-quote-left comillas"></i>
+                                    <p>La atención por correo fue rápida y me ayudaron a mejorar mi hoja de vida. Totalmente recomendado.</p>
+                                    <div class="persona">
+                                        <div class="avatar">AP</div>
+                                        <div><strong>Andrea P.</strong><span>Auxiliar administrativa · Cali</span></div>
+                                    </div>
+                                    <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+                                </div>
+                            </article>
+                            <article class="slide">
+                                <div class="slide-contenido">
+                                    <i class="fas fa-quote-left comillas"></i>
+                                    <p>Buscaba trabajo remoto y aquí encontré justo lo que necesitaba, sin perder tiempo en ofertas que no iban conmigo.</p>
+                                    <div class="persona">
+                                        <div class="avatar">JG</div>
+                                        <div><strong>Juan G.</strong><span>Servicio al cliente · Remoto</span></div>
+                                    </div>
+                                    <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="carrusel-btn next" id="car-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="carrusel-puntos" id="car-puntos"></div>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="seccion" id="faq">
+            <div class="contenedor contenedor-faq">
+                <div class="encabezado-seccion">
+                    <span class="sobretitulo">Preguntas frecuentes</span>
+                    <h2 class="titulo">Resolvemos tus dudas</h2>
+                </div>
+
+                <div class="acordeon" id="acordeon">
+                    <div class="item-faq">
+                        <button class="faq-pregunta" aria-expanded="false">¿Registrarme tiene algún costo? <i class="fas fa-plus"></i></button>
+                        <div class="faq-respuesta"><p>No. Crear tu cuenta y postularte a las vacantes es completamente gratis.</p></div>
+                    </div>
+                    <div class="item-faq">
+                        <button class="faq-pregunta" aria-expanded="false">¿Cómo funcionan los filtros? <i class="fas fa-plus"></i></button>
+                        <div class="faq-respuesta"><p>Puedes filtrar las vacantes por área, ciudad y palabra clave. Así solo ves las ofertas que realmente te interesan.</p></div>
+                    </div>
+                    <div class="item-faq">
+                        <button class="faq-pregunta" aria-expanded="false">¿Puedo postularme a varias vacantes? <i class="fas fa-plus"></i></button>
+                        <div class="faq-respuesta"><p>Sí, puedes postularte a todas las vacantes que quieras con el mismo perfil.</p></div>
+                    </div>
+                    <div class="item-faq">
+                        <button class="faq-pregunta" aria-expanded="false">¿Cómo contacto a soporte? <i class="fas fa-plus"></i></button>
+                        <div class="faq-respuesta"><p>Escríbenos a Soslame@gmail.com o usa el formulario de contacto al final de la página.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section class="seccion seccion-gris" id="contacto">
+            <div class="contenedor grid-contacto">
+                <div class="info-contacto">
+                    <span class="sobretitulo">Contacto</span>
+                    <h2 class="titulo">Hablemos</h2>
+                    <p>Déjanos tu mensaje y un asesor se pondrá en contacto contigo.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> Soslame@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +57 300 000 0000</li>
+                        <li><i class="fas fa-location-dot"></i> Colombia</li>
+                    </ul>
+                </div>
+
+                <form class="formulario" id="form-contacto" novalidate>
+                    <div class="grupo">
+                        <label for="c-nombre">Nombre</label>
+                        <input type="text" id="c-nombre" placeholder="Tu nombre" required>
+                        <small class="error"></small>
+                    </div>
+                    <div class="grupo">
+                        <label for="c-correo">Correo</label>
+                        <input type="email" id="c-correo" placeholder="tucorreo@ejemplo.com" required>
+                        <small class="error"></small>
+                    </div>
+                    <div class="grupo">
+                        <label for="c-mensaje">Mensaje</label>
+                        <textarea id="c-mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <small class="error"></small>
+                    </div>
+                    <button type="submit" class="btn btn-primario ancho"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-marca">
+                <img src="img/logo.png" alt="AGTempleos">
+                <p>La nueva plataforma de empleo por filtros.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#vacantes">Vacantes</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <a href="#" aria-label="Facebook" data-red><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram" data-red><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn" data-red><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="WhatsApp" data-red><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-copy">© <span id="anio"></span> AGTempleos. Todos los derechos reservados.</div>
+    </footer>
+
+    <button class="subir" id="subir" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ============ MODALES ============ -->
+    <div class="modal" id="modal-registro" aria-hidden="true">
+        <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="t-registro">
+            <button class="modal-cerrar" data-cerrar aria-label="Cerrar"><i class="fas fa-xmark"></i></button>
+            <h3 id="t-registro">Crea tu cuenta</h3>
+            <p class="modal-sub">Regístrate gratis y empieza a postularte.</p>
+            <form id="form-registro" novalidate>
+                <div class="grupo"><label for="r-nombre">Nombre completo</label><input type="text" id="r-nombre" required><small class="error"></small></div>
+                <div class="grupo"><label for="r-correo">Correo</label><input type="email" id="r-correo" required><small class="error"></small></div>
+                <div class="grupo"><label for="r-clave">Contraseña</label><input type="password" id="r-clave" minlength="6" required><small class="error"></small></div>
+                <button type="submit" class="btn btn-primario ancho">Registrarme</button>
+                <p class="modal-pie">¿Ya tienes cuenta? <button type="button" class="enlace-simple" data-abrir="modal-login">Inicia sesión</button></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-login" aria-hidden="true">
+        <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="t-login">
+            <button class="modal-cerrar" data-cerrar aria-label="Cerrar"><i class="fas fa-xmark"></i></button>
+            <h3 id="t-login">Iniciar sesión</h3>
+            <p class="modal-sub">Qué bueno verte de nuevo.</p>
+            <form id="form-login" novalidate>
+                <div class="grupo"><label for="l-correo">Correo</label><input type="email" id="l-correo" required><small class="error"></small></div>
+                <div class="grupo"><label for="l-clave">Contraseña</label><input type="password" id="l-clave" required><small class="error"></small></div>
+                <button type="submit" class="btn btn-primario ancho">Ingresar</button>
+                <p class="modal-pie">¿No tienes cuenta? <button type="button" class="enlace-simple" data-abrir="modal-registro">Regístrate</button></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-postular" aria-hidden="true">
+        <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="t-postular">
+            <button class="modal-cerrar" data-cerrar aria-label="Cerrar"><i class="fas fa-xmark"></i></button>
+            <h3 id="t-postular">Postularme</h3>
+            <p class="modal-sub" id="postular-vacante"></p>
+            <form id="form-postular" novalidate>
+                <div class="grupo"><label for="p-nombre">Nombre completo</label><input type="text" id="p-nombre" required><small class="error"></small></div>
+                <div class="grupo"><label for="p-correo">Correo</label><input type="email" id="p-correo" required><small class="error"></small></div>
+                <button type="submit" class="btn btn-primario ancho">Enviar postulación</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
